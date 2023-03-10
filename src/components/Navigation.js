@@ -27,18 +27,18 @@ class PokemonNavigation extends HTMLElement {
         </button>
         <div class="hidden sm:flex sm:items-center sm:ml-6">
           <div class="flex sm:space-x-8">
-            <a href="#" id="popular" class="cursor-pointer nav-link active text-black hover:font-semibold px-3 py-2 text-sm font-light">Popular</a>
-            <a href="#" id="highest-attack" class="cursor-pointer nav-link text-black hover:font-semibold px-3 py-2 text-sm font-light">Highest Attack</a>
-            <a href="#" id="highest-defense" class="cursor-pointer nav-link text-black hover:font-semibold px-3 py-2 text-sm font-light">Highest Defense</a>
+            <a href="#discover" id="popular" class="cursor-pointer nav-link active text-black hover:font-semibold px-3 py-2 text-sm font-light">Popular</a>
+            <a href="#" id="location" class="cursor-pointer nav-link text-black hover:font-semibold px-3 py-2 text-sm font-light">Locationk</a>
+            <a href="#" id="battle" class="cursor-pointer nav-link text-black hover:font-semibold px-3 py-2 text-sm font-light">Battle</a>
             <a href="#" id="shiny" class="cursor-pointer nav-link text-black hover:font-semibold px-3 py-2 text-sm font-light">Shiny</a>
           </div>
         </div>
       </div>
       <div id="menu" class="hidden  border-b-2 border-b-black ">
         <div class="flex flex-col items-center pt-2 pb-3">
-          <a href="#" id="popular" class="cursor-pointer nav-link active text-black hover:font-semibold py-2 text-sm font-light">Popular</a>
-          <a href="#" id="highest-attack" class="cursor-pointer nav-link text-black hover:font-semibold py-2 text-sm font-light">Highest Attack</a>
-          <a href="#" id="highest-defense" class="cursor-pointer nav-link text-black hover:font-semibold py-2 text-sm font-light">Highest Defense</a>
+          <a href="#discover" id="popular" class="cursor-pointer nav-link active text-black hover:font-semibold py-2 text-sm font-light">Popular</a>
+          <a href="#" id="location" class="cursor-pointer nav-link text-black hover:font-semibold py-2 text-sm font-light">Location</a>
+          <a href="#" id="battle" class="cursor-pointer nav-link text-black hover:font-semibold py-2 text-sm font-light">Battle</a>
           <a href="#" id="shiny" class="cursor-pointer nav-link text-black hover:font-semibold py-2 text-sm font-light">Shiny</a>
         </div>
       </div>
