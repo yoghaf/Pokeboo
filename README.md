@@ -1,8 +1,11 @@
 # Pokeboo
 
 Submission Belajar Fundamental Front-End Web Development (Dicoding)
+
 Akan terus diupdate untuk melengkapi fitur yang kurang
+
 link demo [Disini!](https://pokeboo.netlify.app/)
+
 **How to Install**
 
 1.  Run Command
