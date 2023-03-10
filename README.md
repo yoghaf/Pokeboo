@@ -1,6 +1,7 @@
 # Pokeboo
 
 Submission Belajar Fundamental Front-End Web Development (Dicoding)
+Akan terus diupdate untuk melengkapi fitur yang kurang
 
 **How to Install**
 
