@@ -11,8 +11,8 @@ class FilterPokemon extends HTMLElement {
           <div class="flex">
             <label class="mr-2">Sort by:</label>
             <select id="filter" class="rounded-lg px-2 py-1 border border-gray-300">
-              <option value="name_asc">Name A-Z</option>
-              <option value="name_desc">Name Z-A</option>
+              <option value="asc">Name A-Z</option>
+              <option value="desc">Name Z-A</option>
             </select>
           </div>
           <div class="flex  ">
