@@ -15,6 +15,8 @@ Submission Belajar Fundamental Front-End Web Development (Dicoding)
 3.  Run web
 
     npm start
+    
+    
     **KRITERIA SUBMISSION**
 
 - [x] Menggunakan standar _ES6 sintaks_ dalam menuliskan kode _JavaScript_ pada proyek yang dibuat.
