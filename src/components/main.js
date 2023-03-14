@@ -131,17 +131,6 @@ const main = async () => {
   searchbutton.addEventListener("click", async () => {
     const searchpokemon = document.getElementById("search");
     const searchvalue = searchpokemon.value;
-    // const data = await fetchData(url);
-
-    // const promises = data.map(async (url) => {
-    //   try {
-    //     const response = await axios.get(url);
-    //     return response.data;
-    //   } catch (eror) {
-    //     console.log(eror);
-    //   }
-    // });
-    // const results = await Promise.all(promises);
     const filtered = (value, data) => {
       if (value) {
         const searchresult = data.filter((item) => item.name.includes(value));
