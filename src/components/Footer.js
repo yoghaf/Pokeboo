@@ -29,7 +29,7 @@ class FooterSection extends HTMLElement {
               </svg>
         </a>
         <!-- Email -->
-        <a href="utomoyogafirmansyah@gmail.com" target="_blank" class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-gray-400 border-gray-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white">
+        <a href="mailto:utomoyogafirmansyah@gmail.com" target="_blank" class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-gray-400 border-gray-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white">
             <svg class="fill-current" width="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>Gmail</title>
                 <path
@@ -47,7 +47,7 @@ class FooterSection extends HTMLElement {
               </svg>
         </a>
           <!-- Instagram -->
-         <a href="https://wa.me/+6282261353032" target="_blank" class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-gray-400 border-gray-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white">
+         <a href="https://www.instagram.com/utomoyogha/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-gray-400 border-gray-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white">
             <svg class="fill-current" width="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>Instagram</title>
                 <path
@@ -59,7 +59,7 @@ class FooterSection extends HTMLElement {
     </div>
     <div class="profile-info text-white flex justify-center pb-2">
       <div>
-        <h2 class="text-center text-gray-400 text-sm">Made by <a href="https://www.instagram.com/utomoyoghaf/" class="text-blue-500">Utomo Yoga F</h2></div>
+        <h2 class="text-center text-gray-400 text-sm">Made by <a href="https://www.instagram.com/utomoyogha/" class="text-blue-500">Utomo Yoga F</h2></div>
     </div>
   </footer>
     `;

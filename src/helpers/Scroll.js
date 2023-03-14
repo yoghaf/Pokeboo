@@ -4,7 +4,7 @@ const Scroll = () => {
   for (let anchor = 0; anchor < smoothScrollAnchor.length; anchor++) {
     const element = smoothScrollAnchor[anchor];
 
-    element.addEventListener("click", function (e) {
+    element.addEventListener("click", (e) => {
       e.preventDefault();
       if (document.getElementById(this.getAttribute("href").replace("#", "")))
         document.querySelector(this.getAttribute("href")).scrollIntoView({
