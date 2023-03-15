@@ -6,8 +6,6 @@ const Scroll = () => {
 
     element.addEventListener("click", (e) => {
       e.preventDefault();
-      if (document.getElementById(this.getAttribute("href").replace("#", "")))
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
           behavior: "smooth",
         });
     });

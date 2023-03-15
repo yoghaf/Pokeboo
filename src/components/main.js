@@ -179,6 +179,58 @@ const main = async () => {
     });
   });
 
+  //search enter
+  const searchinput = document.getElementById("search");
+  searchinput.addEventListener("keydown", async (event) => {
+    if (event.key === "Enter") {
+      const query = event.target.value;
+
+        if (value) {
+          const searchresult = data.filter((item) => item.name.includes(value));
+          return searchresult;
+        }
+      };
+      const newresults = filtered(query, dataAll);
+      const carousel = document.getElementById("list-poke");
+      carousel.innerHTML = "";
+      newresults.forEach((ele) => {
+        carousel.insertAdjacentHTML(
+          "beforeend",
+          `<div class="card border border-black rounded-lg overflow-hidden shadow-lg hover:shadow-2xl">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${ele.id}.png" alt="${ele.name}" class="w-full h-48 object-contain">
+            <div class="p-4">
+              <h3 class="text-xl font-bold mb-2">${ele.name}</h3>
+              <div class="stat hidden">
+                ${ele.stats
+                  .map(
+                    (stat) =>
+                      `<ol class="grid grid-cols-2 gap-x-4 border-b-2 border-black border-opacity-25">
+                        <li class="font-medium text-gray-700">${stat.stat.name} :</li>
+                        <li class="font-bold">${stat.base_stat}</li>
+                      </ol>`
+                  )
+                  .join("")}
+              </div>
+              <button class="show mt-5 text-black border bg-white border-black hover:bg-black hover:text-white font-bold py-2 px-4 rounded-full">Show Stat</button>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-center text-center">
+            <button class="mx-auto bg-black bg-opacity-5 w-2/3 drop-shadow-xl hover:bg-black text-black hover:text-white font-bold py-2 px-4 rounded-full">Choose Pokemon</button>
+          </div>
+          </div>`
+        );
+      });
+      const buttons = document.querySelectorAll(".show");
+      buttons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+          const currentCard = event.target.closest(".card");
+          const currentStat = currentCard.querySelector(".stat");
+          currentStat.classList.toggle("hidden");
+          currentStat.classList.toggle("active");
+        });
+      });
+    }
+  });
+
   // buttonshow
   const buttons = document.querySelectorAll(".show");
   buttons.forEach((button) => {
