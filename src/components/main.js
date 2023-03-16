@@ -12,17 +12,6 @@ const main = async () => {
 
   const url = urls;
 
-  const fetchData = async (url, offset) => {
-    try {
-      const response = await axios.get(`${url}?offset=${offset}`);
-      const newdata = response.data.results.map((ele) => ele);
-      const dataurl = newdata.map((ele) => ele.url);
-      return dataurl;
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   const data = await fetchData(url);
 
   const promises = data.map(async (url) => {
@@ -35,7 +24,6 @@ const main = async () => {
   });
   const results = await Promise.all(promises);
   dataAll.push(...results);
-  console.log(dataAll);
 
   // add element carousel
 
@@ -73,21 +61,9 @@ const main = async () => {
   const filterpokemon = document.getElementById("filter");
   filterpokemon.addEventListener("change", async () => {
     const selectedValue = filterpokemon.value;
-
-    const filtered = (value, data) => {
-      if (value === "asc") {
-        const newdata = data.sort((a, b) => a.name.localeCompare(b.name));
-        return newdata;
-      } else {
-        const newdata = data.sort((a, b) => b.name.localeCompare(a.name));
-        return newdata;
-      }
-    };
     const newresults = filtered(selectedValue, dataAll);
-
     const carousel = document.getElementById("list-poke");
     carousel.innerHTML = "";
-
     newresults.forEach((ele) => {
       carousel.insertAdjacentHTML(
         "beforeend",
@@ -184,12 +160,6 @@ const main = async () => {
   searchinput.addEventListener("keydown", async (event) => {
     if (event.key === "Enter") {
       const query = event.target.value;
-
-        if (value) {
-          const searchresult = data.filter((item) => item.name.includes(value));
-          return searchresult;
-        }
-      };
       const newresults = filtered(query, dataAll);
       const carousel = document.getElementById("list-poke");
       carousel.innerHTML = "";
@@ -259,8 +229,6 @@ const main = async () => {
     });
     const newresults = await Promise.all(newpromise);
     dataAll.push(...newresults);
-    console.log(dataAll);
-
     newresults.map((ele) => {
       carousel.insertAdjacentHTML(
         "beforeend",
@@ -285,7 +253,6 @@ const main = async () => {
                   <button class="show mt-5 text-black border bg-white border-black hover:bg-black hover:text-white font-bold py-2 px-4 rounded-full">Show Stat</button>
                 </div>
                 <div class="p-6 flex-1 flex flex-col justify-center text-center">
-                <button class="mx-auto bg-black bg-opacity-5 w-2/3 drop-shadow-xl hover:bg-black text-black hover:text-white font-bold py-2 px-4 rounded-full">Choose Pokemon</button>
               </div>
               </div>`
       );
