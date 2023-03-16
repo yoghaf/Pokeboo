@@ -1,4 +1,5 @@
 import axios from "axios";
+import { fetchData, filtered } from "../helpers/data/api";
 
 require("dotenv").config();
 
@@ -253,6 +254,7 @@ const main = async () => {
                   <button class="show mt-5 text-black border bg-white border-black hover:bg-black hover:text-white font-bold py-2 px-4 rounded-full">Show Stat</button>
                 </div>
                 <div class="p-6 flex-1 flex flex-col justify-center text-center">
+                <button id="choose-poke" class="mx-auto bg-black bg-opacity-5 w-2/3 drop-shadow-xl hover:bg-black text-black hover:text-white font-bold py-2 px-4 rounded-full">Choose Pokemon</button>
               </div>
               </div>`
       );
